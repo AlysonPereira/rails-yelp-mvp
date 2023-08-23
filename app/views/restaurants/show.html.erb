@@ -1,0 +1,15 @@
+<div class="container">
+  <h2><%= @restaurant.name %></h2>
+
+  <p><strong>Address:</strong> <%= @restaurant.address%></p>
+  <p><strong>Phone Number:</strong> <%= @restaurant.phone_number %></p>
+  <p><strong>Category:</strong> <%= @restaurant.category %></p>
+  <div class="contai"><h3>Reviews</h3></div>
+  <% @restaurant.reviews.each do |review| %>
+    <div class="list-group-item w-50 mb-3"><p><%= review.content %></p>
+    <p><% review.rating.times do %> ⭐ <% end %>
+    </p></div>
+  <% end %>
+  <%= link_to 'back', restaurants_path, class: "btn btn-sm btn-primary" %>
+  <%= link_to 'Add Review', new_restaurant_review_path(@restaurant), class: "btn btn-sm btn-warning" %>
+</div>

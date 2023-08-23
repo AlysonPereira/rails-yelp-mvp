@@ -29,6 +29,7 @@ gem "jbuilder"
 
 gem "simple_form"
 gem 'bundler', '2.4.19'
+gem 'faker'
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
